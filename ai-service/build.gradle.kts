@@ -7,7 +7,6 @@ plugins {
 
 group = "com.ordinatus"
 version = "0.0.1-SNAPSHOT"
-description = "Demo project for Spring Boot"
 
 java {
 	toolchain {
@@ -20,6 +19,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.springframework.kafka:spring-kafka")
+    developmentOnly("org.springframework.boot:spring-boot-devtools")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
 	testImplementation("org.springframework.kafka:spring-kafka-test")

@@ -1,6 +1,9 @@
 spring:
   application:
     name: task-service
+  mvc:
+    servlet:
+      path: /api/v1
   jpa:
     open-in-view: false
     hibernate:
@@ -12,7 +15,7 @@ spring:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
       properties:
-        spring.json.add.type.headers: false
+        spring.json.add.type.headers: true
 
 ---
 spring:

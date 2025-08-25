@@ -1,5 +1,6 @@
 package com.ordinatus.task.domain.task.service
 
+import com.ordinatus.contracts.events.TaskCreated
 import com.ordinatus.task.domain.task.model.Task
 import com.ordinatus.task.domain.task.port.EventPublisher
 import com.ordinatus.task.domain.task.port.TaskRepository
@@ -32,5 +33,3 @@ private fun CreateTask.toDomain(): Task = Task(
     title = title.trim(),
     status = com.ordinatus.task.domain.task.model.TaskStatus.TODO
 )
-
-data class TaskCreated(val id: UUID, val title: String)

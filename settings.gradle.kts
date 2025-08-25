@@ -6,4 +6,6 @@ pluginManagement {
 }
 
 rootProject.name = "ordinatus"
-include(":task-service", ":ai-service")
+include(":task-service")
+include(":ai-service")
+include("libs")

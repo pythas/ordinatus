@@ -1,3 +1,12 @@
 spring:
   application:
     name: ai-service
+  mvc:
+    servlet:
+      path: /api/v1
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: ai-service
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
